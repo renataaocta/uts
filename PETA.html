@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Web Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        header { background: rgba(14, 28, 118, 0.772); color: white; padding: 10px; }
+        #map {
+            width : 1900px; 
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teknik UGM</h1>
+    </header>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map',{
+            center: [-7.79558, 110.36949],
+            zoom: 12
+        });
+        L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png',{
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var marker = L.marker([-7.763985, 110.372496]).bindPopup('<h1>Teknik Geodesi</h1><p>Teknik Geodesi merupakan bidang yang mempelajari tentang pengukuran tanah, hidrografi, bahkan astronomi.</p><img src = "https://geodesi.ugm.ac.id/wp-content/uploads/sites/8/2017/08/SAVE_20170829_134406.jpeg" style="width:180px"><a href= "https://maps.app.goo.gl/1cf8WCHiuVn3ouJbA" target="_blank"> Lokasi Teknik Geodesi UGM </a>').addTo(map);
+        var marker = L.marker([-7.764178038441107, 110.37154076301523]).bindPopup('<h1>Teknik Arsitketur dan PWK</h1><p>Teknik Arsitektur dan PWK mempelajari mengenai tata runag lahan dan mendesain bangunan serta fungsinya.</p><img src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Farchiplan.ugm.ac.id%2Fid%2Fkbk-teknologi-bangunan-arsitektur%2F&psig=AOvVaw25p9vWa57AJh4SiOWOUHuB&ust=1744336130412000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDhmc2szIwDFQAAAAAdAAAAABAE" style="width:180px"><a href= "https://maps.app.goo.gl/18iEHfKKAWDo2PNa8" target="_blank"> Lokasi Teknik Aristektur dan PWK UGM </a>').addTo(map);
+        var marker = L.marker([-7.7658623685348145, 110.37058249509163]).bindPopup('<h1>Teknik Mesin</h1><p>Teknik mesin merupakan bidang yang mempelajari tentang cara kerja alat dan kegunaannya.</p><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqc6XQBtD3OA9v95EszVVNmY_ArVoRVlooAw&s" style="width:180px"><a href= "https://maps.app.goo.gl/622NUHdirpURRpyJA" target="_blank"> Lokasi Teknik Mesin UGM </a>').addTo(map);
+        var marker = L.marker([-7.765906751282073, 110.37186093629109]).bindPopup('<h1>Teknologi Informasi</h1><p>Prodi yang mempelajari teknologi (IT).</p><img src = "https://pasca.jteti.ugm.ac.id/wp-content/uploads/sites/404/2018/01/wellcome2-1024x527.jpg" style="width:180px"><a href= "https://maps.app.goo.gl/8xnvvzAVqe8udHBG8" target="_blank"> Lokasi TETI UGM </a>').addTo(map);
+        var marker = L.marker([-7.764548046522757, 110.37399630990386]).bindPopup('<h1>Teknik Sipil</h1><p>Bidang yang mempelajari tentang cara pembangunan suatu bangunan.</p><img src ="https://i.ytimg.com/vi/ZcnVtbpB1Ag/maxresdefault.jpg" style="width:180px"><a href= "https://maps.app.goo.gl/rihxVcnM6PJ84fws7" target="_blank"> Lokasi Sipil UGM </a>').addTo(map);
+    </script>
+</body>
+</html>
